@@ -1,0 +1,21 @@
+header {
+    position: fixed;
+    top: 0;
+    height: fit-content;
+    width: 100%;
+    padding:20px;
+    background: white;
+}
+
+.nav-links {
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: var(--col-off-black);
+}
+.nav-links li a:hover {
+    font-weight: var(--fw-bold);
+    color: var(--col-primary);
+}

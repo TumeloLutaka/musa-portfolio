@@ -1,0 +1,20 @@
+footer {
+    height: 54px;
+    margin-top: 72px;
+    padding-bottom: 72px;
+}
+
+footer .container {
+    padding: 12px;
+    border-radius: 4px;
+    background-color: var(--col-yellow);
+}
+
+.footer-icons {
+    
+}
+
+.footer-icon-container {
+    aspect-ratio: 1;
+    height: 30px;
+}

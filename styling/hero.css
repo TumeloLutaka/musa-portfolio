@@ -1,0 +1,15 @@
+.hero-header {
+    margin-bottom: 12px;
+}
+
+.hero-line {
+    min-width: 96px;
+    max-width: 96px;
+    height: 1px;
+    background-color: var(--col-primary);
+}
+
+.hero-text {
+    max-width: 551px;
+    margin-bottom: 24px;
+}

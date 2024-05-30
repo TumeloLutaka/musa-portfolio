@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+@import url('./reset.css');
+@import url('./header.css');
+@import url('./hero.css');
+@import url('./project.css');
+@import url('./about.css');
+@import url('./services.css');
+@import url('./contact.css');
+@import url('./footer.css');
+
+:root {
+    --col-primary: #CE7355;
+    --col-yellow: #F9D6A4;
+    --col-light-yellow: #F8EFE3;
+    --col-off-black: #1C2626;
+
+    --fw-bold: 700;
+}
+
+body {  
+    font-family: 'Poppins', sans-serif;
+    color: var(--col-off-black);
+}
+
+h1 {
+    font-size: 3.667rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.04em;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.04em;
+    line-height: 110%;
+}
+
+h3 {
+    font-size: 2.333rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.02em;
+    line-height: 110%;
+}
+
+h4 {
+    font-size: 2.111rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.02em;
+    line-height: 110%;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+p {
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+    line-height: 200%;
+}
+p.caption {
+    font-size: 0.778rem;
+    line-height: 150%;
+}
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    font-weight: var(--fw-bold);
+    padding: 10px 36px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+.btn:hover {
+    opacity: 70%
+}
+.btn:active {
+    opacity: 80%
+}
+.btn-primary {
+    background-color: var(--col-primary);
+    color: white;
+}
+
+.container {
+    width: 78%;
+    margin: 0 auto;
+}
+
+.flexbox-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+.flexbox-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.flexbox-row-stretch {
+    align-items: stretch;
+}
+.flexbox-normal {
+    justify-content: normal;
+}
+
+.flexbox-row .column {
+    flex: 1;
+}
+
+.section-header {
+    margin-top: 72px;
+    margin-bottom: 24px;
+}
+.section-header p{
+    max-width: 840px;
+}
+.section-header-center{
+    margin-top: 72px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.section-header-center p{
+    text-align: center;
+    max-width: 774px;
+    margin: 0 auto;
+}
+
+.text-primary {
+    color: var(--col-primary)
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
