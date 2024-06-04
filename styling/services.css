@@ -11,3 +11,15 @@
     padding: 24px 12px;
     background-color: var(--col-light-yellow);
 }
+
+.services-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+}
+
+@media (max-width: 727px) {
+    .services-wrapper {
+        flex-direction: column;
+    }
+}

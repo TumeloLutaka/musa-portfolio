@@ -8,21 +8,27 @@
   </head>
   <body>
     <header>
-      <div class="container flexbox-row">
+      <div class="container header-container">
         <div class="logo">
           <a href="#hero-section"><img src="./images/logo.svg" alt="Profile Logo" /></a>
         </div>
-        <ul class="nav-links flexbox-row">
+        <ul id="nav-links" class="nav-links">
           <li><a href="#projects-section">Projects</a></li>
           <li><a href="#about-section">About</a></li>
           <li><a href="#services-section">Services</a></li>
           <li><a href="#contact-section" class="btn btn-primary" style="color:white;">Let's Talk</a></li>
         </ul>
+
+        <div id="toggle-btn" class="toggle-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
-    <section id="hero-section">
-      <div class="container flexbox-row">
+    <section id="hero-section" class="hero-section">
+      <div class="container hero-container">
         <div class="column">
           <div class="flexbox-row flexbox-normal">
             <div class="hero-line"></div>
@@ -37,10 +43,10 @@
             delivering quality and professional work to boost your bussiness and
             image.
           </p>
-          <a href="#contact-section" class="btn btn-primary" style="color:white;">Let's Talk</a>
+          <a class="btn btn-primary" href="#contact-section">Let's Talk</a>
         </div>
 
-        <div class="column">
+        <div class="column column-image">
           <img src="./images/hero-image-min.png" alt="Musa Hero Image" />
         </div>
       </div>
@@ -205,7 +211,7 @@
           </p>
         </div>
 
-        <div class="services flexbox-row flexbox-row-stretch">
+        <div class="services-wrapper">
           <div class="service-card">
             <div class="bullet-point"></div>
             <div class="content">
@@ -304,4 +310,6 @@
       </div>
     </footer>
   </body>
+
+  <script src="./scripts/main.js"></script>
 </html>

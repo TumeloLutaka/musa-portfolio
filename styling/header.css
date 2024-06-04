@@ -1,13 +1,23 @@
 header {
     position: fixed;
     top: 0;
-    height: fit-content;
+    height: var(--header-height);
     width: 100%;
-    padding:20px;
+    padding: 20px 0;
     background: white;
 }
 
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
 .nav-links {
+    display: flex;
+    align-items: center;
     gap: 24px;
     list-style: none;
 }
@@ -18,4 +28,45 @@ header {
 .nav-links li a:hover {
     font-weight: var(--fw-bold);
     color: var(--col-primary);
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+    border: none;
+    background-color: transparent;
+}
+
+.toggle-btn span {
+    height: 3px;
+    width: 100%;
+    background-color: var(--col-primary);
+    border-radius: 10px;
+}
+
+@media (max-width: 727px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction:column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .toggle-btn {
+        display: flex;
+    }
 }
