@@ -10,11 +10,12 @@ footer .container {
     background-color: var(--col-yellow);
 }
 
-.footer-icons {
-    
+.icons-wrapper {
+    display: flex;
+    gap: 12px;
 }
 
 .footer-icon-container {
     aspect-ratio: 1;
-    height: 30px;
+    height: 1.667rem;
 }

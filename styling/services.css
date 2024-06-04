@@ -18,7 +18,7 @@
     gap: 24px;
 }
 
-@media (max-width: 727px) {
+@media (max-width: 768px) {
     .services-wrapper {
         flex-direction: column;
     }

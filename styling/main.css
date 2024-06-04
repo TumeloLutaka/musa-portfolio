@@ -149,7 +149,7 @@ section {
     text-transform: uppercase;
 }
 
-@media (max-width: 727px) {
+@media (max-width: 768px) {
     html {
         font-size: 1.9vw; /* Increase font size for smaller screens */
     }

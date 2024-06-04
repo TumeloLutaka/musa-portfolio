@@ -2,3 +2,25 @@
     height: 585px;
     max-height: 585px;
 }
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.about-wrapper .column{
+    flex: 1;
+}
+
+.about-wrapper .column-right{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column;
+    }
+}
