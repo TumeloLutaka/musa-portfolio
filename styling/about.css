@@ -1,6 +1,6 @@
 .about-image-holder {
-    height: 585px;
-    max-height: 585px;
+    aspect-ratio: 1.06;
+    width: 100%;
 }
 
 .about-wrapper {

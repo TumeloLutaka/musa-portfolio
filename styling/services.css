@@ -1,11 +1,12 @@
 .bullet-point {
     aspect-ratio:1;
-    height: 40px;
+    height: 2rem;
     border-radius: 50%;
     background-color: var(--col-primary);
 }
 
 .service-card {
+    flex: 1;
     display: flex;
     gap: 12px;
     padding: 24px 12px;
@@ -14,11 +15,15 @@
 
 .services-wrapper {
     display: flex;
-    align-items: stretch;
     gap: 24px;
+    align-items: stretch; 
 }
 
 @media (max-width: 768px) {
+    .bullet-point {
+        height: 3rem;
+    }
+    
     .services-wrapper {
         flex-direction: column;
     }

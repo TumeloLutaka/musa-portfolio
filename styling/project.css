@@ -5,6 +5,8 @@
 }
 
 .pill {
+    display: flex;
+    align-items: center;
     height: 24px;
     padding: 4px 8px;
     border-radius: 50px;
