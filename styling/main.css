@@ -8,6 +8,7 @@
 @import url('./services.css');
 @import url('./contact.css');
 @import url('./footer.css');
+@import url('./animations.css');
 
 :root {
     --col-primary: #CE7355;

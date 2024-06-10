@@ -1,0 +1,25 @@
+.tanim-slide-left {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slide-horizontal .5s ease-out forwards;
+}
+
+.tanim-slide-up {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slide-vertical .5s ease-out forwards;
+}
+
+@keyframes slide-horizontal {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-vertical {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
