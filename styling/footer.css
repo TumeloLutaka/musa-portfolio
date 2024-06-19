@@ -1,21 +1,26 @@
 footer {
-    height: 54px;
-    margin-top: 72px;
-    padding-bottom: 72px;
+    margin-bottom: 2rem;
 }
 
-footer .container {
-    padding: 12px;
-    border-radius: 4px;
+.footer__container {
+    place-items: center;
+    padding: 1rem;
     background-color: var(--col-yellow);
 }
 
-.icons-wrapper {
+.footer__socials {
     display: flex;
-    gap: 12px;
+    column-gap: 1rem;
 }
 
-.footer-icon-container {
-    aspect-ratio: 1;
-    height: 1.667rem;
+.footer__copyright {
+    text-align: center;
+    font-size: var(--small-font-size);
+}
+
+@media screen and (min-width: 1150px) {
+    .footer__container {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+    }
 }

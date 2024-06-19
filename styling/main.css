@@ -1,157 +1,216 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
 
-@import url('./reset.css');
-@import url('./header.css');
-@import url('./hero.css');
-@import url('./project.css');
-@import url('./about.css');
-@import url('./services.css');
-@import url('./contact.css');
-@import url('./footer.css');
-/* @import url('./animations.css'); */
+@import url("./reset.css");
+@import url("./header.css");
+@import url("./home.css");
+@import url("./works.css");
+@import url("./about.css");
+@import url("./services.css");
+@import url("./contact.css");
+@import url("./footer.css");
 
+/*=============== VARIABLES CSS ===============*/
 :root {
-    --col-primary: #CE7355;
-    --col-yellow: #F9D6A4;
-    --col-light-yellow: #F8EFE3;
-    --col-off-black: #1C2626;
+  /*========== Colors ==========*/
+  --col-primary: #ce7355;
+  --col-primary-light: #ce735533;
+  --col-yellow: #f9d6a4;
+  --col-light-yellow: #f8efe3;
+  --col-off-black: #1c2626;
+  --col-white: #fff;
 
-    --fw-bold: 700;
+  --header-height: 3.5rem;
+  
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --biggest-font-size: 2rem;
+  --big-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smallest-font-size: 0.6rem;
 
-    --header-height: 80px;
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
-body {  
-    font-family: 'Poppins', sans-serif;
-    color: var(--col-off-black);
+/*========== Responsive typography==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 5.5rem;
+    --big-font-size: 2.75rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1.125rem;
+    --small-font-size: 0.875rem;
+  }
 }
 
-h1 {
-    font-size: 3.667rem;
-    font-weight: var(--fw-bold);
-    letter-spacing: -0.04em;
-    line-height: 110%;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-size: 3rem;
-    font-weight: var(--fw-bold);
-    letter-spacing: -0.04em;
-    line-height: 110%;
-}
-
-h3 {
-    font-size: 2.333rem;
-    font-weight: var(--fw-bold);
-    letter-spacing: -0.02em;
-    line-height: 110%;
-}
-
-h4 {
-    font-size: 2.111rem;
-    font-weight: var(--fw-bold);
-    letter-spacing: -0.02em;
-    line-height: 110%;
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-size: 1vw;
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--col-white);
+  color: var(--col-off-black);
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-semi-bold);
 }
 
 p {
-    font-size: 1rem;
-    letter-spacing: -0.01em;
-    line-height: 200%;
-}
-p.caption {
-    font-size: 0.778rem;
-    line-height: 150%;
+  line-height: 170%;
 }
 
-section {
-    display: flex;
-    align-items: center;
+ul {
+  list-style: none;
 }
 
-.btn {
-    display: inline-block;
-    font-weight: var(--fw-bold);
-    padding: 10px 36px;
-    border: none;
-    border-radius: 4px;
-    background-color: transparent;
-    text-transform: uppercase;
-    cursor:pointer;
-}
-.btn:hover {
-    opacity: 70%
-}
-.btn:active {
-    opacity: 80%
-}
-.btn-primary {
-    background-color: var(--col-primary);
-    color: white;
+a {
+  text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-    width: 78%;
-    margin: 0 auto;
+  max-width: 1120px;
+  margin-inline: 1.5rem;
 }
 
-.flexbox-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 12px;
-}
-.flexbox-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-}
-.flexbox-row-stretch {
-    align-items: stretch;
-}
-.flexbox-normal {
-    justify-content: normal;
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
-.flexbox-row .column {
-    flex: 1;
+.section {
+  padding-block: 5rem 2rem;
 }
 
-.section-header {
-    margin-top: 72px;
-    margin-bottom: 24px;
-}
-.section-header p{
-    max-width: 840px;
-}
-.section-header-center{
-    margin-top: 72px;
-    margin-bottom: 24px;
-    text-align: center;
-}
-.section-header-center p{
-    text-align: center;
-    max-width: 774px;
-    margin: 0 auto;
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: 2rem;
 }
 
 .text-primary {
-    color: var(--col-primary)
+  color: var(--col-primary);
 }
 
-.uppercase {
-    text-transform: uppercase;
+.main {
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    html {
-        font-size: 1.9vw; /* Increase font size for smaller screens */
-    }
+.btn {
+  display: inline-block;
+  font-weight: var(--font-semi-bold);
+  padding: 12px 8px;
+  border-radius: .4rem;
+  transition: all .4s;
+}
+
+.btn-primary {
+  background-color: var(--col-primary);
+  color: var(--col-white);
+}
+
+.btn-primary:hover {
+  opacity: 70%;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--col-light-yellow);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--col-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--col-yellow);
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--col-off-black);
+  display: inline-flex;
+  padding: 6px;
+  color: var(--col-white);
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px var(--col-off-black);
+  z-index: var(--z-tooltip);
+  transition: bottom 0.4s, transform 0.4s;
+}
+
+.scrollup:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* Show Scroll Up */
+.show-scroll {
+  bottom: 3rem;
+}
+
+@media screen and (max-width: 300px) {
+  .container {
+    margin-inline: 1rem;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block:3rem 5rem
+}
+
+.section__title {
+    margin-bottom: 4rem;
+}
 }

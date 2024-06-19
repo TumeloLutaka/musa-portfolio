@@ -1,29 +1,32 @@
-.detail {
-    flex: 1;
+.contact__container {
+    row-gap: 2rem;;
+}
+
+.contact__card {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.details-wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-.detail p {
-    font-size: 1.222rem;
-    font-weight: var(--fw-bold);
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.icon-content {
+.contact__icon {
     aspect-ratio: 1;
     height: 40px;
 }
 
-@media (max-width: 768px) {
-    .details-wrapper {
-        flex-direction: column;
+.contact__detail {
+    font-weight: var(--font-bold);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 540px) {
+    .contact__container {
+        grid-template-columns: 350px;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .contact__container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -5,322 +5,285 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Musa - Portfolio</title>
     <link rel="stylesheet" href="styling/main.css" />
+    <!-- REMIX ICONS LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <header>
-      <div class="container header-container">
-        <div class="logo">
-          <a href="#hero-section"><img src="./images/logo.svg" alt="Profile Logo" /></a>
-        </div>
-        <ul id="nav-links" class="nav-links">
-          <li><a href="#projects-section">Projects</a></li>
-          <li><a href="#about-section">About</a></li>
-          <li><a href="#services-section">Services</a></li>
-          <li><a href="#contact-section" class="btn btn-primary" style="color:white;">Let's Talk</a></li>
-        </ul>
+    <!-- ======================HEADER====================== -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Musa<span class="text-primary">.</span></a>
+      
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="#home" class="nav__link active__link">Home</a></li>
+            <li><a href="#work" class="nav__link">Work</a></li>
+            <li><a href="#about" class="nav__link">About Me</a></li>
+            <li><a href="#services" class="nav__link">Services</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
 
-        <div id="toggle-btn" class="toggle-btn">
-          <span></span>
-          <span></span>
-          <span></span>
+          <!-- Close button -->
+           <div class="nav__close" id="nav-close">
+            <i class="ri-close-large-line"></i>
+           </div>
         </div>
-      </div>
+
+        <!-- Toggle Menu -->
+         <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-2-fill"></i>
+         </div>
+      </nav>
     </header>
 
-    <section id="hero-section" class="hero-section">
-      <div class="container hero-container">
-        <div class="column  tanim-slide-up">
-          <div class="flexbox-row flexbox-normal">
-            <div class="hero-line"></div>
-            <p class="uppercase text-primary">Introducing</p>
-          </div>
+    <!-- ====================== MAIN ====================== -->
+    <main>
+       <!-- ====================== HOME ====================== -->
+        <section class="home section" id="home">
+          <div class="home__container container grid">
+            <img src="./images/hero-image-min.png" alt="Musa Hero Image" class="home__img"/>
 
-          <h1 class="hero-header">
-            I'm <span class="text-primary">Musangwa Sivubwa</span>
-          </h1>
-          <p class="hero-text">
-            I am a creative designer based in Ndola, Zambia passionate about
-            delivering quality and professional work to boost your bussiness and
-            image.
-          </p>
-          <a class="btn btn-primary" href="#contact-section">Let's Talk</a>
-        </div>
-
-        <div class="column column-image tanim-slide-left">
-          <img src="./images/hero-image-min.png" alt="Musa Hero Image" />
-        </div>
-      </div>
-    </section>
-
-    <section id="projects-section" class="projects-section">
-      <div class="container">
-        <div class="section-header">
-          <h2><span class="text-primary">Projects </span>Showcase</h2>
-          <p>
-            Dive into a curated selection of my finest projects, where
-            creativity meets precision. Each piece reflects my commitment to
-            excellence and my ability to transform ideas into visually
-            compelling designs.
-          </p>
-        </div>
-
-        <div class="projects-wrapper">
-
-            <div class="project-card">
-              <div class="project-image-container">
-                <img src="./images/3c-styles-image.jpg" alt="Project Image" />
-              </div>
-              <p>C3 Styles</p>
-              <div class="pill">
-                <p class="caption">Logo Design</p>
-              </div>
+            <div class="home__data">
+             <p class="home__intro text-primary">INTRODUCING</p>
+             
+             <h1 class="home__name">
+               I'M <span class="text-primary">MUSANGWA SIVUBWA</span>
+             </h1>
+             <p class="home__profession">
+               I am a creative designer based in Ndola, Zambia passionate about
+               delivering quality and professional work to boost your bussiness and
+               image.
+             </p>
+             <a class="btn btn-primary" href="#contact">Let's Talk</a>
             </div>
-  
-            <div class="project-card">
-              <div class="project-image-container">
-                <img src="./images/sb-spare-image.jpg" alt="Project Image" />
-              </div>
-              <p>SB Spares</p>
-              <div class="pill-holder">
-                <div class="pill">
-                  <p class="caption">Company Profile</p>
+          </div>
+        </section>
+
+       <!-- ====================== WORK ====================== -->
+        <section class="work section" id="work">
+          <h1 class="section__title">RECENT <span class="text-primary">WORKS</span></h1>
+
+          <div class="work__container container grid">
+            <article class="work__card">
+              <a href="" target="_blank" class="work__link">
+                <img src="./images/3c-styles-image.jpg" alt="image" class="work__img"/>
+                <p class="work__title">C3 Styles</p>
+                <div class="work__pills">
+                  <p class="work__pill">Logo Design</p>
+                  <p class="work__pill">Logo Design</p>
                 </div>
-              </div>
-            </div>
-  
-            <div class="project-card">
-              <div class="project-image-container">
-                <img src="./images/madam-lowes-image.jpg" alt="Project Image" />
-              </div>
-              <p>Madam Loureen</p>
-              <div class="pill-holder">
-                <div class="pill">
-                  <p class="caption">Poster Design</p>
+
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </article>
+
+            <article class="work__card">
+              <a href="" target="_blank" class="work__link">
+                <img src="./images/sb-spare-image.jpg" alt="image" class="work__img"/>
+                <p class="work__title">SB Spares</p>
+                <div class="work__pills">
+                  <p class="work__pill">Company Profile</p>
                 </div>
-                <div class="pill">
-                  <p class="caption">Menu Design</p>
+
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </article>
+
+            <article class="work__card">
+              <a href="" target="_blank" class="work__link">
+                <img src="./images/madam-lowes-image.jpg" alt="image" class="work__img"/>
+                <p class="work__title">Madam Loureen</p>
+                <div class="work__pills">
+                  <p class="work__pill">Poster Design</p>
+                  <p class="work__pill">Menu Design</p>
                 </div>
-              </div>
-            </div>
 
-          <div class="project-card">
-            <div class="project-image-container">
-              <img src="./images/cleaning-service-image.jpg" alt="Project Image" />
-            </div>
-            <p>Muna Waste Management</p>
-            <div class="pill-holder">
-              <div class="pill">
-                <p class="caption">Logo Design</p>
-              </div>
-              <div class="pill">
-                <p class="caption">Poster Design</p>
-              </div>
-            </div>
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </article>
+
+            <article class="work__card">
+              <a href="" target="_blank" class="work__link">
+                <img src="./images/cleaning-service-image.jpg" alt="image" class="work__img"/>
+                <p class="work__title">Muna Waste Management</p>
+                <div class="work__pills">
+                  <p class="work__pill">Logo Design</p>
+                  <p class="work__pill">Poster Design</p>
+                </div>
+
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </article>
+
+            <article class="work__card">
+              <a href="" target="_blank" class="work__link">
+                <img src="./images/company-profile.jpg" alt="image" class="work__img"/>
+                <p class="work__title">Sabane Investment Limited</p>
+                <div class="work__pills">
+                  <p class="work__pill">Company Profile</p>
+                  <p class="work__pill">Cards</p>
+                </div>
+
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </article>
           </div>
+        </section>
 
-          <div class="project-card">
-            <div class="project-image-container">
-              <img src="./images/vintage-homes.jpg" alt="Project Image" />
-            </div>
-            <p>Vantage Properties</p>
-            <div class="pill-holder">
-              <div class="pill">
-                <p class="caption">Logo Design</p>
+       <!-- ====================== INFO ====================== -->
+       <section class="info section" id="about">
+          <h2 class="section__title"><span class="text-primary">ABOUT</span> ME</h2>
+
+          <div class="info__container container grid">
+            <!-- ABOUT -->
+            <div class="about grid">
+              <div class="about__content">
+                <h3 class="info__title">My Info</h3>
+                <p class="about__description">
+                  Welcome to my creative space! I'm Musa, a <span class="text-primary"><b>Graphic Designer</b></span>
+                  passionate about bringing ideas to life through <span class="text-primary"><b>captivating visuals</b></span>.
+                </p>
+
+                <a class="btn btn-primary" href="#contact">Let's Talk</a>
               </div>
-              <div class="pill">
-                <p class="caption">Poster Design</p>
-              </div>
+
+              <img src="./images/musa-image-two.jpg" alt="image" class="about__img"/>
             </div>
-          </div>
 
-          <div class="project-card">
-            <div class="project-image-container">
-              <img src="./images/company-profile.jpg" alt="Project Image" />
-            </div>
-            <p>Sabane Investment Limited</p>
-            <div class="pill-holder">
-              <div class="pill">
-                <p class="caption">Company Profile</p>
-              </div>
-              <div class="pill">
-                <p class="caption">Company Cards</p>
-              </div>
-            </div>
-          </div>
-        </div>
+            <!-- EXPERIENCE -->
+            <div class="experience grid">
+              <h3 class="info__title">Experience|My Philosophy</h3>
 
-        <div class="button-holder">
-          <button type="button" class="btn btn-primary margin-center">
-            See More
-          </button>
-        </div>
-      </div>
-    </section>
+              <div class="experience__content grid">
+                <div class="experience__data grid">
+                  <h2 class="experience__company grid">Designer</h2>
 
-    <section id="about-section" class="about-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>About <span class="text-primary">Me</span></h2>
-          <p>
-            Welcome to my creative space! I'm Musa, a graphic designer
-            passionate about bringing ideas to life through captivating visuals.
-          </p>
-        </div>
-
-        <div class="about-wrapper">
-          <div class="column">
-            <div class="about-image-holder">
-              <img src="./images/musa-image-two.jpg" alt="Musa Image Two" />
-            </div>
-          </div>
-
-          <div class="column column-right">
-            <p>
-              Hello! I'm Musangwa Sivubwa, a passionate graphic designer with a
+                  <div>
+                    <h3 class="experience__profession">Graphic Designer</h3>
+                    <span class="experience__date">5 Years</span>
+                    <p class="experience__description">
+                      Hello! I'm Musangwa Sivubwa, a passionate graphic designer with a
               keen eye for detail and a love for creativity. With nine years of
               graphic design experience under my belt I have honed my skills in
               creating visually appealing and effective designs that tell a
               story and engage audiences.
-            </p>
-            <h3>My Philosophy</h3>
-            <p>
-              I began my journey into the world of design five years ago and
-              since then I have worked with a variety of clients to help them
-              bring their visions to life.
-            </p>
-            <p>
-              My goal is to create designs that not only look good but also
-              serve a purpose and drive results. I'm always learning and staying
-              up-to-date with the latest design trends and technologies to
-              ensure my work remains fresh and relevant.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services-section" class="services-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Offered <span class="text-primary">Services </span></h2>
-          <p>
-            Unleash the full potential of your brand with my bespoke design
-            services. From captivating logos to comprehensive brand identities,
-            I craft designs that resonate and leave a lasting impression.
-          </p>
-        </div>
-
-        <div class="services-wrapper">
-          <div class="service-card">
-            <div class="bullet-point"></div>
-            <div class="content">
-              <h4>Logo Design</h4>
-              <p>
-                Your logo is the face of your brand. I create unique and
-                memorable logos that capture the essence of your business and
-                leave a lasting impression.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="bullet-point"></div>
-            <div class="content">
-              <h4>Company Profile</h4>
-              <p>
-                I design comprehensive and visually appealing company profiles
-                that tell your story and make a powerful first impression.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="bullet-point"></div>
-            <div class="content">
-              <h4>Brand Identity</h4>
-              <p>
-                I develop complete brand identities that ensure your business
-                looks cohesive and professional across all platforms.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="bullet-point"></div>
-            <div class="content">
-              <h4>Banners & Card</h4>
-              <p>
-                I design eye-catching striking banners and elegant cards that 
-                effectively communicate your message and enhance your brand’s visibility. 
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="contact-section" class="contact-section">
-        <div class="container">
-            <div class="section-header-center">
-            <h2><span class="text-primary">Contact</span> Musa</h2>
-            <p>
-                Let’s bring your vision to life. Whether you’re looking to start a
-                new project or simply want to learn more about my services, I’d love
-                to hear from you. Reach out today and let’s create something amazing
-                together.
-            </p>
-            </div>
-
-            <div class="details-wrapper">
-                <div class="detail">
-                    <div class="icon-content">
-                        <img src="./images/email.svg" alt="Email Icon" />
-                    </div>
-                    
-                    <p class="detail">musangwasivub814@gmail.com</p>
+                    </p>
+                  </div>
                 </div>
-                
-                <div class="detail">
-                    <div class="icon-content">
-                        <img src="./images/location.svg" alt="Location Icon" />
-                    </div>
-                    
-                    <p class="detail">Zambia - Ndola</p>
-                </div>
-                
-                <div class="detail">
-                    <div class="icon-content">
-                        <img src="./images/phone.svg" alt="Phone Icon" />
-                    </div>
-                    
-                    <p class="detail">+(260) 974-157-066</p>
-                </div>
+              </div>
             </div>
-        </div>
-      </div>
-    </section>
 
-    <footer>
-      <div class="container flexbox-row">
-        <div class="icons-wrapper">
-          <div class="footer-icon-container">
+            <!-- SKILLS -->
+            <div class="skills grid">
+              <h3 class="info__title">Skills</h3>
+
+              <div class="skills__content grid">
+                <div class="skills__box">
+                  <img src="./images/skills/info-photoshop.svg" alt="image" class="skills__img">
+                  <span class="skills__name">Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+       <!-- ====================== SERVICES ====================== -->
+       <section class="services section" id="services">
+          <h2 class="section__title">OFFERED <span class="text-primary">SERVICES</h2>
+
+            <div class="services__container container grid">
+              <article class="services__card">
+                <i class="ri-ball-pen-line services__icon"></i>
+                <h3 class="services__title">Logo Design</h3>
+                <p class="services__description">
+                  Your logo is the face of your brand. I create unique and
+                  memorable logos that capture the essence of your business and
+                  leave a lasting impression.
+                </p>
+              </article>
+              
+              <article class="services__card">
+                <i class="ri-building-line services__icon"></i>
+                <h3 class="services__title">Company Profile</h3>
+                <p class="services__description">
+                  I design comprehensive and visually appealing company profiles
+                  that tell your story and make a powerful first impression.
+                </p>
+              </article>
+
+              <article class="services__card">
+                <i class="ri-focus-3-line services__icon"></i>
+                <h3 class="services__title">Brand Identity</h3>
+                <p class="services__description">
+                  I develop complete brand identities that ensure your business
+                  looks cohesive and professional across all platforms.
+                </p>
+              </article>
+
+              <article class="services__card">
+                <i class="ri-bank-card-line services__icon"></i>
+                <h3 class="services__title">Banner & Card Design</h3>
+                <p class="services__description">
+                  I design eye-catching striking banners and elegant cards that 
+                  effectively communicate your message and enhance your brand’s visibility. 
+                </p>
+              </article>
+            </div>
+        </section>
+
+       <!-- ====================== CONTACT ====================== -->
+       <section class="contact section" id="contact">
+          <h2 class="section__title"><span class="text-primary">CONTACT</span> MUSA</h2>
+
+          <div class="contact__container container grid">
+            <article class="contact__card">
+              <img src="./images/email.svg" alt="image" class="contact__icon"/>
+              <p class="contact__detail">musangwasivub814@gmail.com</p>
+            </article>
+            
+            <article class="contact__card">
+              <img src="./images/location.svg" alt="image" class="contact__icon"/>
+              <p class="contact__detail">Zambia - Ndola</p>
+            </article>
+
+            <article class="contact__card">
+              <img src="./images/phone.svg" alt="image" class="contact__icon"/>
+              <p class="contact__detail">+(260) 974-157-066</p>
+            </article>
+          </div>
+        </section>
+     </main>
+     
+       <!-- ====================== FOOTER ====================== -->
+       <footer>
+      <div class="footer__container container grid">
+        <ul class="footer__socials">
+          <li>
             <a href="https://www.instagram.com"><img src="./images/instagram-icon.svg" alt="Instagram Icon" /></a>
-          </div>
-          <div class="footer-icon-container">
+          </li>
+          <li>
             <a href="https://www.facebook.com"><img src="./images/facebook-icon.svg" alt="Facebook Icon" /></a>
-          </div>
-          <div class="footer-icon-container">
+          </li>
+          <li>
             <a href="https://www.linkedin.com"><img src="./images/linkedin-icon.svg" alt="LinkedIn Icon" /></a>
-          </div>
-        </div>
+          </li>
+        </ul>
 
-        <p class="caption">
-          © 2024 All rights reserved by. Musa Sivubwa
+        <p class="footer__copyright">
+          &#169; 2024 All Rights Reserved By Musangwa Sivubwa
         </p>
       </div>
     </footer>
+
+       <!-- ====================== SCROLL UP ====================== -->
+        <a href="#" class="scrollup" id="scroll-up">
+          <i class="ri-arrow-up-line"></i>
+        </a>
   </body>
 
+<!--=============== SCROLLREVEAL ===============-->
+<script src="assets/js/scrollreveal.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
   <script src="./scripts/main.js"></script>
 </html>
